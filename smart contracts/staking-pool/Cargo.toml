@@ -1,0 +1,22 @@
+[package]
+name = "stacking"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gstd = { git = "https://github.com/gear-tech/gear.git", features = ["debug"], rev = "78dfa07"}
+scale-info = { version = "2", default-features = false, features = ["derive"] }
+parity-scale-codec = { version = "3", default-features = false }
+stacking-io = { path = "io" }
+gmeta = { git = "https://github.com/gear-tech/gear", rev = "78dfa07" }
+ft-io = { git = "https://github.com/Maskla-Dev/fungible-token.git" }
+
+[build-dependencies]
+gear-wasm-builder = { git = "https://github.com/gear-tech/gear.git", rev = "78dfa07" }
+ft-io = { git = "https://github.com/Maskla-Dev/fungible-token.git" }
+stacking-io = { path = "io" }
+
+[dev-dependencies]
+gtest = { git = "https://github.com/gear-tech/gear.git", rev = "78dfa07"}
